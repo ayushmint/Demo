@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ayush Mittal | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+      color: #f0f0f0;
+      line-height: 1.6;
+      overflow-x: hidden;
+      padding: 30px;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      color: #00ffe7;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #aaa;
+    }
+
+    .section {
+      margin: 50px auto;
+      max-width: 900px;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,255,247,0.1);
+      backdrop-filter: blur(6px);
+    }
+
+    .profile {
+      text-align: center;
+    }
+
+    .profile img {
+      width: 150px;
+      border-radius: 50%;
+      border: 3px solid #00ffe7;
+      margin-bottom: 20px;
+    }
+
+    .socials a {
+      margin: 0 15px;
+      color: #00ffe7;
+      font-size: 24px;
+      transition: transform 0.3s ease;
+    }
+
+    .socials a:hover {
+      transform: scale(1.2);
+    }
+
+    .projects .card {
+      background: #1c2b33;
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .projects .card:hover {
+      transform: translateY(-5px);
+    }
+
+    form input, form textarea {
+      width: 100%;
+      margin: 10px 0;
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      background: #2e3b45;
+      color: #f0f0f0;
+    }
+
+    form button {
+      background-color: #00ffe7;
+      color: #0f2027;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    form button:hover {
+      background-color: #00c2b5;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 14px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Ayush Mittal</h1>
+    <p>Developer • Actor • Learner</p>
+  </header>
+
+  <section class="section profile">
+    <img src="https://via.placeholder.com/150" alt="Ayush Profile" />
+    <p>Hello! I’m Ayush, a tech enthusiast and creative mind exploring the world of development and storytelling. I love building things that live on the internet.</p>
+    <div class="socials">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+  </section>
+
+  <section class="section projects">
+    <h2>🚀 Featured Projects</h2>
+    <div class="card">
+      <h3>Weather Forecast App</h3>
+      <p>Live weather app using OpenWeather API. Clean UI with temperature, humidity, and more.</p>
+    </div>
+    <div class="card">
+      <h3>Personal Portfolio</h3>
+      <p>This site! Built with HTML, CSS, and JavaScript, featuring animations and dark theme.</p>
+    </div>
+  </section>
+
+  <section class="section contact">
+    <h2>📬 Contact Me</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Ayush Mittal. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value;
+      alert(`Thank you, ${name}! Your message has been sent.`);
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
